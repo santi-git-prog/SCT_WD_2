@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Container - Glass + Glow */
+.container {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 50px 40px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    box-shadow: 0 0 10px #ffffff10;
+  }
+  50% {
+    box-shadow: 0 0 30px #ffffff30;
+  }
+  100% {
+    box-shadow: 0 0 10px #ffffff10;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #ffffffcc;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px #ffffff33;
+}
+
+/* Display with neon effect */
+.display {
+  font-size: 52px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #00ffc3;
+  text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+button:disabled {
+  background: #444;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Lap list */
+ul#laps {
+  list-style: none;
+  margin-top: 30px;
+  max-height: 160px;
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffc3 #1f1c2c;
+}
+
+ul#laps::-webkit-scrollbar {
+  width: 6px;
+}
+ul#laps::-webkit-scrollbar-thumb {
+  background: #00ffc3;
+  border-radius: 5px;
+}
+ul#laps::-webkit-scrollbar-track {
+  background: #1f1c2c;
+}
+
+ul#laps li {
+  background: rgba(255, 255, 255, 0.07);
+  margin: 6px auto;
+  padding: 10px;
+  width: 85%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 16px;
+  color: #f1f1f1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+ul#laps li:hover {
+  transform: scale(1.03);
+  background: rgba(0, 255, 195, 0.1);
+}
